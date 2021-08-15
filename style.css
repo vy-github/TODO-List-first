@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500&display=swap');
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Poppins', sans-serif;
+}
+
+.container {
+   position: relative;
+   min-height: 200px;
+   width: 80%;
+   margin: 20px auto;
+   /* border: 1px solid blue; */
+}
+
+.tab-section {
+   display: flex;
+}
+
+.tab-section .tabs {
+   height: 50px;
+   width: 200px;
+   margin-right: 15px;
+   background-color: #225643;
+   color: #eee;
+   font-size: 18px;
+   border-top-left-radius: 20%;
+   border-top-right-radius: 20%;
+   border-top: 1px solid #aaa;
+   border-right: 1px solid #aaa;
+   border-left: 1px solid #aaa;
+   cursor: pointer;
+   transition: .5s;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.tab-section .tabs h3 {
+   font-weight: 300;
+   font-size: 18px;
+}
+
+.tab-section .tabs:first-child {
+   color: #225643;
+   background-color: #eee;
+}
+
+.tab-section .tabs.reminder-tab {
+   background-color: #225643;
+   color: #eee;
+}
+
+.tab-section .tabs.reminder-tab ~ .history-tab{
+   color: #225643;
+   background-color: #eee;
+}
+
+
+.sub-container {
+   position: relative;
+   min-height: 670px;
+   background-color: #F8F9FA;
+   border: 1px solid #aaa;
+   /* border-top: 3px solid #225643; */
+   overflow: hidden;
+}
+
+.content {
+   position: absolute;
+   width: 100%;
+   /* border: 3px solid green; */
+   transition: .5s;
+}
+
+.set-appointment {
+   left: -100%;
+}
+
+.history {
+   left: 0%;
+}
+
+
+.content .input-con {
+   position: relative;
+   margin: 0px auto;
+   padding: 20px;
+   min-height: 80px;
+   max-width: 550px;
+   /* border: 1px solid red; */
+}
+
+.set-appointment h1 {
+   color: #225643;
+   text-align: center;
+   margin: 30px auto;
+   padding: 0 20px;
+   font-family: 'Cinzel', serif;
+   font-weight: 600;
+}
+
+.set-appointment .time {
+   display: flex;
+   justify-content: space-between;
+}
+
+.set-appointment .radio-input {
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+}
+
+.set-appointment .checkbox-input {
+   display: flex;
+   justify-content: space-evenly;
+   flex-wrap: wrap;
+
+   display: none;
+}
+
+.set-appointment .input-con input[type=text],
+.set-appointment .input-con input[type=date],
+.set-appointment .input-con select,
+.set-appointment .input-con textarea {
+   display: block;
+   height: 40px;
+   width: 100%;
+   padding: .375rem .75rem;
+   font-size: 1rem;
+   font-weight: 400;
+   line-height: 1.5;
+   color: #212529;
+   background-color: #fff;
+   background-clip: padding-box;
+   border: 1px solid #343536;
+   border-radius: .25rem;
+   outline: none;
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+   transition: border-color .15s ease-in-out,
+               box-shadow .15s ease-in-out;
+}
+
+.set-appointment .radio-input input[type=radio] {
+   margin-right: 10px;
+   margin-left: 20px;
+   transition: .3s;
+}
+
+.set-appointment .radio-input input[type=radio]:first-child {
+   margin-left: 0px;
+}
+
+.set-appointment .checkbox-input input[type=checkbox] {
+   margin-right: 10px;
+   margin: 10px auto;
+   width: 30px;
+}
+
+.set-appointment .input-con textarea {
+   min-height: 100px;
+   resize: none;
+   margin-right: 10px;
+}
+
+.set-appointment .input-con select{
+   display: inline-block;
+   width: 47%;
+}
+
+.set-appointment .input-con span {
+   position: absolute;
+   left: 30px;
+   top: 28px;
+   font-size: 16px;
+   letter-spacing: 2px;
+   font-weight: 400;
+   transition: .3s;
+}
+
+.set-appointment .input-con input:hover,
+.set-appointment .input-con input:focus,
+.set-appointment .input-con select:hover,
+.set-appointment .input-con select:focus,
+.set-appointment .input-con textarea:hover,
+.set-appointment .input-con textarea:focus {
+   border-color: #17A2B8;
+}
+
+.set-appointment .radio-input label:hover {
+   color: #225643;
+}
+
+.set-appointment .input-con input:valid ~ span,
+.set-appointment .input-con input:focus ~ span,
+.set-appointment .input-con textarea:valid ~ span,
+.set-appointment .input-con textarea:focus ~ span {
+   left: 20px;
+   top: 0;
+   font-size: 14px;
+   color: #132F2E;
+}
+
+/* .set-appointment .input-con #label-set-date {
+   visibility: hidden;
+}
+
+.set-appointment .input-con input:valid ~ #label-set-date {
+   visibility: visible; 
+} */
+
+
+.set-appointment .input-con button{
+   display: block;
+   color: #18383a;
+   background-color: #76C4AA;
+   padding: .5rem .8rem;
+   margin: 0 auto;
+   width: 50%;
+   font-size: 1.1rem;
+   border-radius: 25px;
+   border: 1px solid transparent;
+   background: linear-gradient(45deg, #c7beca, #8e9a9b, #c7beca);
+   background-size: 200%;
+   border-radius: .25rem;
+   cursor: pointer;
+   transition: .3s;
+}
+
+.set-appointment .input-con button:hover{
+   background-position: right;
+}
+
+
+.history {
+   padding: 30px;
+}
+
+.history .cards {
+   position: relative;
+   margin: 20px auto;
+   padding: 20px 30px;
+   min-height: 100px;
+   max-width: 900px;
+   color: #eee;
+   background-color: #343A40;
+   border-radius: 10px;
+   border: 1px solid #dc3545;
+
+   display: flex;
+   justify-content: space-between;
+}
+
+.history .cards .card-area {
+   width: 85%;
+   /* border: 1px solid green; */
+}
+
+.history .cards .card-area .card-data {
+   display: flex;
+   justify-content: space-between;
+   padding: 5px;
+   /* border: 1px solid red; */
+}
+
+.history .cards .card-area .card-data h3 {
+   width: 70%;
+   letter-spacing: 1px;
+   color: #f1a078;
+   font-family: 'Roboto Slab', serif;
+   font-weight: 400;
+   /* border: 1px solid red; */
+}
+
+.history .cards .card-area .desc h4:first-child {
+   font-weight: normal;
+   width: 80%;
+   /* border: 1px solid red; */
+}
+
+.history .cards .card-area .card-data span {
+   color: #FFC107;
+   font-weight: normal;
+   margin-left: 5px;
+   letter-spacing: 2px;
+}
+
+
+.history .cards .button-area {
+   width: 10%;
+   /* border: 1px solid green; */
+}
+
+.history .cards .button-area button{
+   height: 100%;
+   width: 100%;
+   color: #fff;
+   background-color: #dc3545;
+   border-color: #dc3545;
+   font-weight: 400;
+   line-height: 1.5;
+   text-decoration: none;
+   border: 1px solid transparent;
+   padding: .375rem .75rem;
+   font-size: 1rem;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: color .15s ease-in-out,
+                     background-color .15s ease-in-out,
+                     border-color .15s ease-in-out,
+                     box-shadow .15s ease-in-out;
+}
+
+
+
+@media only screen and (max-width: 1175px) {
+   .history .cards {
+      flex-direction: column;
+   }
+   .history .cards .card-area {
+      width: 100%;
+      margin-bottom: 20px;
+   }
+   .history .cards .button-area {
+      width: 100%;
+      text-align: center;
+   }
+   .history .cards .button-area button {
+      max-width: 300px;
+   }
+}
+
+
+@media only screen and (max-width: 700px) {
+   .history .cards .card-area .title {
+      flex-direction: column;
+   }
+   .history .cards .card-area .title h3 {
+      margin-bottom: 10px;
+   }
+   .history .cards .card-area .desc {
+      flex-direction: column-reverse;
+   }
+   .history .cards .card-area .desc h4 {
+      margin-bottom: 10px;
+   }
+   .history .cards .card-area .card-data h3 {
+      width: 100%;
+   }
+   .history .cards .card-area .desc h4:first-child {
+      width: 100%;
+   }
+}
+
+@media only screen and (max-width: 530px) {
+   .tab-section {
+      justify-content: space-between;
+   }
+   .tab-section .tabs {
+      margin-right: 0;
+   }
+}
+
+@media only screen and (max-width: 420px) {
+   .tab-section {
+      display: block;
+   }
+   .tab-section .tabs {
+      width: 100%;
+      border-radius: 0;
+   }
+
+   .history {
+      padding: 10px;
+   }
+   .history .cards {
+      margin: 20px 0;
+      padding: 10px;
+   }
+
+   .set-appointment .time {
+      display: block;
+   }
+   .set-appointment .input-con select {
+      display: block;
+      width: 100%;
+   }
+   .set-appointment .input-con select:first-child {
+      margin-bottom: 40px;
+   }
+}

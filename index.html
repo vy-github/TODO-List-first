@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <link rel="stylesheet" href="./style.css">
+
+   <title>ToDo List</title>
+</head>
+<body>
+
+   <div class="container">
+
+
+      <div class="tab-section">
+
+         <div class="tabs">
+            <h3>Set Reminder</h3>
+         </div>
+   
+         <div class="tabs history-tab">
+            <h3>Show Reminders</h3>
+         </div>
+
+      </div>
+
+
+
+      <div class="sub-container">
+
+
+         <form action="" class="content set-appointment">
+
+            <h1>Set Reminder</h1>
+   
+            <div class="input-con">
+               <input type="text" required>
+               <span>Title</span>
+            </div>
+   
+            <div class="input-con">
+               <input type="date" required>
+               <!-- <span id="label-set-date">Set Date</span> -->
+            </div>
+
+            <div class="input-con time">
+               <select id="hours">
+                  <option value="">Select Hour</option>
+               </select>
+               <select id="minutes">
+                  <option value="">Select Minute</option>
+               </select>
+            </div>
+
+            <div class="input-con radio-input">
+               <label for="once"><input type="radio" id="once" name="repeat" checked>Once</label>
+               <label for="daily"><input type="radio" id="daily" name="repeat">Daily</label>
+               <label for="week"><input type="radio" id="week" name="repeat">Weekly</label>
+               <label for="month"><input type="radio" id="month" name="repeat">Monthly</label>
+               <label for="annual"><input type="radio" id="annual" name="repeat">Annually</label>
+            </div>
+
+            <div class="input-con checkbox-input">
+               <label for="sunday"><input type="checkbox" id="sunday" name="repeat">Sunday</label>
+               <label for="monday"><input type="checkbox" id="monday" name="repeat">Monday</label>
+               <label for="tuesday"><input type="checkbox" id="tuesday" name="repeat">Tuesday</label>
+               <label for="wednesday"><input type="checkbox" id="wednesday" name="repeat">Wednesday</label>
+               <label for="thursday"><input type="checkbox" id="thursday" name="repeat">Thursday</label>
+               <label for="friday"><input type="checkbox" id="friday" name="repeat">Friday</label>
+               <label for="saturday"><input type="checkbox" id="saturday" name="repeat">Saturday</label>
+            </div>
+
+            <div class="input-con">
+               <textarea required></textarea>
+               <span>Description</span>
+            </div>
+
+            <div class="input-con">
+               <button>Submit</button>
+            </div>
+   
+         </form>
+
+
+         <div class="content history">
+   
+   
+            <!-- <div class="cards">
+
+               <div class="card-area">
+
+                  <div class="card-data title">
+                     <h3>Project work</h3>
+                     <h4>on <span>01/08/2021</span> </h4>
+                  </div>
+   
+                  <div class="card-data desc">
+                     <h4>I have a project work just do quick asap</h4>
+                     <h4>at <span>12:00</span> </h4>
+                  </div>
+
+               </div>
+
+               <div class="button-area">
+                  <button>Cancel</button>
+               </div>
+               
+            </div> -->
+   
+   
+         </div>
+
+
+      </div>
+      
+
+
+   </div>
+   
+</body>
+
+<script src="./app.js"></script>
+
+</html>
